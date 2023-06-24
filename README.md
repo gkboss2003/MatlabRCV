@@ -10,4 +10,3 @@ should be located in the same directory as your voter data to function properly.
 If you find anything you'd like me to add, please submit a feature request
 Same goes for bugs, please let me know!
 
-This code should only be used for personal use, for commercial use send me a message to work out licensing. 
