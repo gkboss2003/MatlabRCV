@@ -26,7 +26,7 @@ end
 
 % check for valid candidates(can.) ie. can. 6 receiving votes in a 5 can.
 % election
-funerror = 0;
+
 if size(startdata,2) > maxcan
     error('Some voters may have voted for too many candidates\nPlease ensure you have selected the correcet range\nDo not select any empty rows!','A1')
 end
