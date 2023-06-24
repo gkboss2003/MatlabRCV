@@ -7,7 +7,7 @@ while maxcan > candidates
     maxcan = input("How many candidates can a voter vote for? -> ");
 end
 xlfile = input("What is the name of your excel file? -> ",'s');
-xlrange = input("What range is your data located?/n" + ...
+xlrange = input("What range is your data located? " + ...
     "Votes will only be counted from the range you select ->  ",'s');
 xlfile = append(xlfile,'.csv');
 dataold = readtable(xlfile,"Range",xlrange);
