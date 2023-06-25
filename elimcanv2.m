@@ -1,7 +1,13 @@
-function[adjustedvotes,elim] = elimcanv2(olddata,results,round)
+function[adjustedvotes,elim] = elimcanv2(olddata,results)
 
 sorted = sort(results);
-low = sorted(1,round);
+for i=1:size(sorted,2)
+    if sorted(1,i) > 0
+        low = sorted(1,i);
+        break
+    end
+end
+
 i=1;
 found = 0;
 while found == 0
