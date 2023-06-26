@@ -105,17 +105,23 @@ results = zeros(candidates,candidates);
 majcounter = zeros(candidates,1);
 
 while winner == 0
+    roundelim = 0;
     [roundresults,roundmajority,winner] = votingcalculation(ongoingdata,candidates);
     results(roundnum,:) = roundresults;
     majcounter(roundnum,1) = roundmajority;
-
     if winner > 0
         break
     end
     fprintf("\n\nRound %g calculated\n",roundnum)
     fprintf("Round %g majority was %g\n",roundnum,roundmajority)
-    [newdata,roundelim] = elimcanv2(ongoingdata,roundresults,roundnum);
-    fprintf("Candidate %g was eliminated in round %g, results are displayed below\n",roundelim,roundnum)
+    [newdata,roundelim] = elimcanv2(ongoingdata,roundresults);
+    if size(roundelim,2) > 1
+        fprintf("Multiple candidates were eliminated in round %g\n",roundnum)
+        fprintf("Candidate %g was eliminated\n",roundelim)
+        disp("Results are displayed below")
+    else
+        fprintf("Candidate %g was eliminated in round %g, results are displayed below\n",roundelim,roundnum)
+    end
     disp(roundresults)
     ongoingdata = newdata;
     roundnum = roundnum + 1;
