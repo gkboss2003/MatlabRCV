@@ -11,4 +11,5 @@ If you find anything you'd like me to add, please submit a feature request
 Same goes for bugs, please let me know!
 
 This script handles ballots per Maine's Ranked Choice Voting legislation. Details can be found [here](https://www.maine.gov/sos/cec/elec/upcoming/pdf/250c535-2018-230-complete.pdf)
+
 The only thing it does not handle at the moment is Two Consecutive Skipped rankings, this is currently being worked on. 
